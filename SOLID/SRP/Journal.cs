@@ -1,4 +1,4 @@
-﻿namespace SOLID
+﻿namespace SOLID.SRP
 {
     public class Journal
     {
