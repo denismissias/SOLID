@@ -1,4 +1,5 @@
-﻿using SOLID.OCP;
+﻿using SOLID.LSP;
+using SOLID.OCP;
 using SOLID.SRP;
 
 #region SRP
@@ -61,4 +62,17 @@ foreach (var p in bf.Filter(products, largeGreenSpec2))
     Console.WriteLine($" - {p.Name} is green and large");
 }
 #endregion
+#endregion
+
+#region LSP
+static void UseIt(Rectangle r)
+{
+    r.Height = 10;
+    Console.WriteLine($"Expected area of {10 * r.Width}, got {r.Area}");
+}
+var rc = new Rectangle(2, 3);
+UseIt(rc);
+
+var sq = new Square(5);
+UseIt(sq);
 #endregion
